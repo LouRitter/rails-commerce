@@ -33,7 +33,24 @@
       }
       .price{
         font-size: 1.5em;
-        font-weight: bold;;
+        font-weight: bold;
+      }
+
+      form, div {
+        display: inline;
+      }
+      input[type="submit"]{
+        background-color: rgb(136, 34, 73);
+        border-radius: 0.345em;
+        border: solid thin rgb(68, 17, 17);
+        color: white;
+        font-size: 1em;
+        padding: 0.5em;
+      }
+      input[type="submit"]:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(220, 29, 102);
+        border-color: #ccc;
       }
     }
   }

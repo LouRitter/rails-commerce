@@ -41,7 +41,7 @@ header.main {
 .content {
   margin: 0;
   padding: 0;
-
+  height: 100%;
   display: flex;
   display: -webkit-flex;
   flex-direction: column; // mobile is horizontally laid out
@@ -54,6 +54,7 @@ header.main {
   }
 
   nav {
+    min-height: 100vh;
     padding-bottom: 1em;
     background: rgb(81, 81, 81);
     text-align: center;  // mobile has centered nav
@@ -87,5 +88,17 @@ header.main {
   main {
     padding: 0.5em;
   }
+}
+.notice, #notice{
+  background: rgb(197, 255, 187);
+  color: rgb(54, 136, 34);
+  border: solid thin rgb(54, 136, 34);
+
+  padding: 0.5em;
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.25em;
 }
 //
