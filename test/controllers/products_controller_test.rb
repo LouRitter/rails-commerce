@@ -9,11 +9,20 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get products_url
     assert_response :success
+    assert_select 'nav.side_nav a', minimum: 4
+    assert_select "a[href=?]", new_product_path
+    assert_select "table tr", count: products.count + 1
+
   end
 
   test "should get new" do
     get new_product_url
     assert_response :success
+    assert_select "a[href=?]", products_path
+    assert_select "form #product_title"
+    assert_select "form #product_description"
+    assert_select "form #product_image_url"
+    assert_select "form #product_price"
   end
 
   test "should create product" do
@@ -39,6 +48,11 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_product_url(@product)
     assert_response :success
+    assert_select "a[href=?]", products_path
+    assert_select "form #product_title"
+    assert_select "form #product_description"
+    assert_select "form #product_image_url"
+    assert_select "form #product_price"
   end
 
   test "should update product" do
