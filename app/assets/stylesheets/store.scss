@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .store{
   max-width: 80em;
+
+  @media (min-width: 30em) {
+    min-width: 50%
+
+  }
   ul.catalog{
     border-top: solid 0.25em;
     list-style: none;
