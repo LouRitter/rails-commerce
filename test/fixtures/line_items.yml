@@ -3,7 +3,10 @@
 one:
   product: two
   cart: one
+  price: products(:two).price
 
 two:
   product: two
   cart: two
+  price: products(:two).price
+
